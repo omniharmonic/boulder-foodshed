@@ -3,14 +3,15 @@
   "version": 1,
   "brief": {
     "about": "The landing page for an app that connects people with farmers in their area.",
-    "audience": "Boulder Locals",
+    "audience": "Boulder locals",
     "feeling": [
       "warm",
       "bold",
       "earthy",
       "modern",
       "handmade"
-    ]
+    ],
+    "notes": "Primary goal: join the waitlist (app not launched yet). One main call to action across the page: Join the waitlist. Replace all Relay support-software sample content; do not invent farmers, quotes, numbers or prices."
   },
   "brand": {
     "name": "Boulder Foodshed"
@@ -141,5 +142,5 @@
       "name": "Orbit"
     }
   ],
-  "updatedAt": "2026-10-28T04:17:41.424Z"
+  "updatedAt": "2026-10-28T04:26:45.030Z"
 }
