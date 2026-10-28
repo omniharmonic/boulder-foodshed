@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schema.openspace.host/v1/styles.json",
+  "choices": {
+    "palette": {
+      "brand": "oklch(0.6 0.13 185)",
+      "neutral": "cool",
+      "contrast": "standard",
+      "source": "brand"
+    },
+    "pairing": "sora-inter",
+    "density": "comfortable",
+    "shape": "round",
+    "buttons": "pill-solid",
+    "motion": "expressive",
+    "imageTreatment": "rounded"
+  }
+}
