@@ -1,39 +1,32 @@
 {
   "$schema": "https://schema.openspace.host/v1/site.json",
   "title": "Boulder Foodshed",
-  "tagline": "The landing page for an app that connects people with farmers in their area.",
+  "tagline": "A weekly basket from the Boulder Farmers Market, brought to your door.",
   "nav": [
     {
       "type": "page",
-      "page": "pg_frdb7psmx0",
-      "label": "Features"
+      "page": "pg_c69tkhv0yb",
+      "label": "How it works",
+      "anchor": "how-it-works"
     },
     {
       "type": "page",
-      "page": "pg_scxghk4vxy",
-      "label": "Pricing"
-    },
-    {
-      "type": "collection",
-      "collection": "changelog",
-      "label": "Changelog"
+      "page": "pg_c69tkhv0yb",
+      "label": "Baskets",
+      "anchor": "baskets"
     },
     {
       "type": "page",
-      "page": "pg_e6gc55hpzq",
-      "label": "About"
-    },
-    {
-      "type": "link",
-      "label": "Sign in",
-      "href": "https://app.relay.example/login"
+      "page": "pg_c69tkhv0yb",
+      "label": "Questions",
+      "anchor": "questions"
     },
     {
       "type": "button",
-      "label": "Start free",
+      "label": "Join the waitlist",
       "link": {
         "type": "url",
-        "url": "https://app.relay.example/signup"
+        "url": "/#waitlist"
       },
       "style": "primary"
     }
@@ -99,7 +92,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "The shared inbox and help centre for small support teams."
+                    "text": "A weekly basket from the Boulder Farmers Market, owned by the people who grow it, cook it, carry it, and eat it."
                   }
                 ]
               }
@@ -136,7 +129,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Product"
+                    "text": "The week"
                   }
                 ]
               },
@@ -145,12 +138,12 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Features",
+                    "text": "How it works",
                     "marks": [
                       {
                         "type": "link",
                         "attrs": {
-                          "href": "/features/"
+                          "href": "/#how-it-works"
                         }
                       }
                     ]
@@ -162,12 +155,12 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Pricing",
+                    "text": "Baskets",
                     "marks": [
                       {
                         "type": "link",
                         "attrs": {
-                          "href": "/pricing/"
+                          "href": "/#baskets"
                         }
                       }
                     ]
@@ -179,12 +172,12 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Changelog",
+                    "text": "Questions",
                     "marks": [
                       {
                         "type": "link",
                         "attrs": {
-                          "href": "/changelog/"
+                          "href": "/#questions"
                         }
                       }
                     ]
@@ -213,7 +206,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Company"
+                    "text": "Join"
                   }
                 ]
               },
@@ -222,89 +215,12 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "About",
+                    "text": "Join the waitlist",
                     "marks": [
                       {
                         "type": "link",
                         "attrs": {
-                          "href": "/about/"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Contact",
-                    "marks": [
-                      {
-                        "type": "link",
-                        "attrs": {
-                          "href": "/contact/"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        "variant": "default"
-      },
-      {
-        "id": "blk_g4f6bhftbp",
-        "type": "text",
-        "v": 1,
-        "column": 3,
-        "fields": {
-          "content": {
-            "type": "doc",
-            "content": [
-              {
-                "type": "paragraph",
-                "attrs": {
-                  "preset": "eyebrow"
-                },
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Help"
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Status",
-                    "marks": [
-                      {
-                        "type": "link",
-                        "attrs": {
-                          "href": "https://status.relay.example"
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "paragraph",
-                "content": [
-                  {
-                    "type": "text",
-                    "text": "Help centre",
-                    "marks": [
-                      {
-                        "type": "link",
-                        "attrs": {
-                          "href": "https://help.relay.example"
+                          "href": "/#waitlist"
                         }
                       }
                     ]
@@ -333,7 +249,7 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "© 2026 Boulder Foodshed Software Ltd. Made in five countries."
+                    "text": "© 2026 Boulder Foodshed. Built by Benjamin Life (@omniharmonic)."
                   }
                 ]
               }
@@ -355,9 +271,7 @@
     }
   ],
   "seo": {
-    "titleTemplate": "%s — Boulder Foodshed",
-    "description": "The shared inbox and help centre for small support teams.",
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
+    "description": "A weekly basket from the Boulder Farmers Market, planned by a local chef and delivered to your door. Join the waitlist."
   },
   "locale": "en-US",
   "integrations": {

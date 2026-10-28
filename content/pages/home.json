@@ -4,7 +4,8 @@
   "title": "Home",
   "slug": "",
   "seo": {
-    "description": "The landing page for an app that connects people with farmers in their area."
+    "description": "A weekly basket from the Boulder Farmers Market, planned by a local chef and delivered to your door. Join the waitlist.",
+    "title": "A weekly basket from the Boulder Farmers Market"
   },
   "sections": [
     {
