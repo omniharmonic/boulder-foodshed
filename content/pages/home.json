@@ -230,6 +230,76 @@
       ]
     },
     {
+      "id": "sec_qvk5q93ag1",
+      "preset": "component/box-label@1",
+      "label": "Box label",
+      "layout": {
+        "mode": "stack",
+        "columns": {
+          "d": [
+            12
+          ]
+        },
+        "width": "wide"
+      },
+      "style": {
+        "colorTheme": "dark",
+        "padding": {
+          "d": "xl",
+          "m": "lg"
+        }
+      },
+      "blocks": [
+        {
+          "id": "blk_3aet477xye",
+          "type": "component/box-label",
+          "v": 1,
+          "fields": {
+            "caption": "Names stay blank until each farm says yes.",
+            "cardTitle": "This week's box",
+            "eyebrow": "The label on the box",
+            "fromLabel": "from",
+            "heading": "Every box names the farms it came from.",
+            "intro": {
+              "type": "doc",
+              "content": [
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "type": "text",
+                      "text": "Open the box and the label tells you what is inside and who grew it. Farms appear on the label by name, and only after they have said yes."
+                    }
+                  ]
+                }
+              ]
+            },
+            "rows": [
+              {
+                "item": "Winter squash"
+              },
+              {
+                "item": "Kale"
+              },
+              {
+                "item": "Carrots"
+              },
+              {
+                "item": "Apples"
+              },
+              {
+                "item": "Sourdough"
+              },
+              {
+                "item": "Eggs"
+              }
+            ],
+            "stamp": "Saturday box"
+          }
+        }
+      ]
+    },
+    {
       "id": "sec_64pxbdk0na",
       "preset": "logos/split-heading@1",
       "label": "Logos beside heading",

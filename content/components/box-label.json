@@ -1,0 +1,123 @@
+{
+  "name": "box-label",
+  "label": "Box label",
+  "description": "A paper label like the one on the box. Each item rolls in line by line, then a blank line for the farm's name draws itself beside it.",
+  "version": 1,
+  "category": "feature",
+  "tags": [
+    "label",
+    "animated",
+    "signature",
+    "list"
+  ],
+  "fields": {
+    "caption": {
+      "kind": "text",
+      "label": "Small print",
+      "optional": true,
+      "maxLength": 100
+    },
+    "cardTitle": {
+      "kind": "text",
+      "label": "Label headline",
+      "maxLength": 40
+    },
+    "eyebrow": {
+      "kind": "text",
+      "label": "Small label",
+      "optional": true,
+      "maxLength": 40
+    },
+    "fromLabel": {
+      "kind": "text",
+      "label": "Word before each blank line",
+      "maxLength": 12
+    },
+    "heading": {
+      "kind": "text",
+      "label": "Heading",
+      "maxLength": 80
+    },
+    "intro": {
+      "kind": "richText",
+      "label": "Text beside the label",
+      "optional": true
+    },
+    "rows": {
+      "kind": "list",
+      "label": "Items on the label",
+      "fields": {
+        "item": {
+          "kind": "text",
+          "label": "Item",
+          "maxLength": 30
+        }
+      },
+      "min": 3,
+      "max": 8,
+      "itemLabel": "item"
+    },
+    "stamp": {
+      "kind": "text",
+      "label": "Label stamp",
+      "maxLength": 30
+    }
+  },
+  "defaults": {
+    "caption": "Names stay blank until each farm says yes.",
+    "cardTitle": "This week's box",
+    "eyebrow": "The label on the box",
+    "fromLabel": "from",
+    "heading": "Every box names the farms it came from.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "Open the box and the label tells you what is inside and who grew it. Farms appear on the label by name, and only after they have said yes."
+            }
+          ]
+        }
+      ]
+    },
+    "rows": [
+      {
+        "item": "Winter squash"
+      },
+      {
+        "item": "Kale"
+      },
+      {
+        "item": "Carrots"
+      },
+      {
+        "item": "Apples"
+      },
+      {
+        "item": "Sourdough"
+      },
+      {
+        "item": "Eggs"
+      }
+    ],
+    "stamp": "Saturday box"
+  },
+  "template": "<div class='bl' id='{{@uid}}'>\n  <div class='bl__copy'>\n    {{#if eyebrow}}<p class='bl__eyebrow'>{{eyebrow}}</p>{{/if}}\n    <h2 class='bl__title'>{{heading}}</h2>\n    {{rich intro class=\"bl__intro\"}}\n  </div>\n  <div class='bl__stage'>\n    <div class='bl__card' data-bl-card>\n      <div class='bl__top'><span class='bl__stamp'>{{stamp}}</span></div>\n      <p class='bl__cardtitle'>{{cardTitle}}</p>\n      <ul class='bl__rows'>\n        {{#each rows}}\n        <li class='bl__row' data-bl-row><span class='bl__item'>{{item}}</span><span class='bl__from'><span class='bl__fromlbl'>{{../fromLabel}}</span><span class='bl__blank'></span></span></li>\n        {{/each}}\n      </ul>\n      {{#if caption}}<p class='bl__caption'>{{caption}}</p>{{/if}}\n    </div>\n  </div>\n</div>",
+  "css": ".bl { display: grid; gap: var(--os-space-xl); align-items: center; }\n.bl__eyebrow { margin: 0 0 var(--os-space-xs); font-family: var(--os-font-label); font-size: var(--os-type-eyebrow-font-size); letter-spacing: var(--os-type-eyebrow-letter-spacing); text-transform: uppercase; color: var(--os-eyebrow-color, var(--os-color-accent)); }\n.bl__title { margin: 0 0 var(--os-space-sm); font-family: var(--os-font-heading); font-weight: var(--os-font-weight-heading); font-size: var(--os-type-h1-font-size); line-height: var(--os-type-h1-line-height); color: var(--os-color-heading); text-wrap: balance; }\n.bl__intro { max-width: 30em; font-size: var(--os-type-lead-font-size); line-height: var(--os-type-lead-line-height); color: var(--os-color-text); }\n.bl__intro p { margin: 0; }\n.bl__stage { padding: var(--os-space-sm) var(--os-space-sm) var(--os-space-md); }\n.bl__card { position: relative; background: var(--os-color-text); color: var(--os-color-background); border-radius: var(--os-radius-image, 14px); padding: var(--os-space-xl) var(--os-space-lg) var(--os-space-lg); transform: rotate(-1.5deg); box-shadow: 10px 10px 0 var(--os-color-ochre); transition: transform 0.7s var(--os-motion-ease, ease-out), opacity 0.5s ease-out; }\n.bl__card::before { content: ''; position: absolute; top: 14px; left: 50%; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: var(--os-color-background); }\n.bl__top { display: flex; justify-content: flex-end; margin-bottom: var(--os-space-xs); }\n.bl__stamp { font-family: var(--os-font-label); font-size: var(--os-type-eyebrow-font-size); letter-spacing: var(--os-type-eyebrow-letter-spacing); text-transform: uppercase; color: var(--os-color-background); border: 2px solid var(--os-color-accent); border-radius: 999px; padding: 2px 12px; }\n.bl__cardtitle { margin: 0 0 var(--os-space-sm); padding-bottom: var(--os-space-xs); border-bottom: 2px dashed var(--os-color-background); font-family: var(--os-font-heading); font-weight: var(--os-font-weight-heading); font-size: var(--os-type-h2-font-size); line-height: 1.1; }\n.bl__rows { list-style: none; margin: 0; padding: 0; }\n.bl__row { display: flex; align-items: flex-end; gap: var(--os-space-sm); padding: 10px 0; }\n.bl__item { flex: none; font-family: var(--os-font-heading); font-weight: var(--os-font-weight-heading); font-size: var(--os-type-h4-font-size); line-height: 1.15; }\n.bl__from { flex: 1; display: flex; align-items: flex-end; gap: 8px; min-width: 0; }\n.bl__fromlbl { flex: none; font-family: var(--os-font-label); font-size: var(--os-type-small-font-size); text-transform: uppercase; letter-spacing: 0.08em; color: var(--os-color-accent); }\n.bl__blank { flex: 1; min-width: 40px; height: 0; margin-bottom: 5px; border-bottom: 2px solid var(--os-color-background); transform-origin: left center; }\n.bl__caption { margin: var(--os-space-sm) 0 0; padding-top: var(--os-space-xs); border-top: 2px dashed var(--os-color-background); font-family: var(--os-font-label); font-size: var(--os-type-small-font-size); color: var(--os-color-background); }\n.bl--js .bl__card { opacity: 0; transform: translateY(32px) rotate(-5deg); }\n.bl--js.is-in .bl__card { opacity: 1; transform: rotate(-1.5deg); }\n.bl--js .bl__row { opacity: 0; transform: translateY(10px); }\n.bl--js .bl__blank { transform: scaleX(0); }\n.bl--js.is-in .bl__row { opacity: 1; transform: none; transition: opacity 0.24s ease-out, transform 0.24s ease-out; transition-delay: calc(0.45s + var(--i, 0) * 0.16s); }\n.bl--js.is-in .bl__blank { transform: scaleX(1); transition: transform 0.4s ease-out; transition-delay: calc(0.65s + var(--i, 0) * 0.16s); }\n@media (min-width: 768px) { .bl { grid-template-columns: 1fr 1.1fr; gap: var(--os-space-2xl); } .bl__card { padding: var(--os-space-xl) var(--os-space-xl) var(--os-space-lg); } }\n@media (prefers-reduced-motion: reduce) { .bl__card, .bl__row, .bl__blank { transition: none !important; } }",
+  "js": "const bl = root.querySelector('.bl');\nconst card = root.querySelector('[data-bl-card]');\nif (!bl || !card || ctx.reducedMotion) return;\nArray.prototype.slice.call(root.querySelectorAll('[data-bl-row]')).forEach((row, i) => { row.style.setProperty('--i', String(i)); });\nbl.classList.add('bl--js');\nconst io = new IntersectionObserver((entries) => {\n  if (entries[0].isIntersecting) {\n    bl.classList.add('is-in');\n    io.disconnect();\n  }\n}, { threshold: 0.3 });\nio.observe(card);",
+  "section": {
+    "width": "wide",
+    "padding": {
+      "d": "xl",
+      "m": "lg"
+    }
+  },
+  "ai": {
+    "purpose": "The signature moment: a paper box label whose items roll in one by one with a blank line for each farm's name.",
+    "whenToUse": "Once per page, on a dark section, to show that every box names its farms.",
+    "avoid": "Real farm names unless each farm has said yes; more than eight items."
+  }
+}
