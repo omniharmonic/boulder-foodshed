@@ -4,8 +4,8 @@
   "title": "Home",
   "slug": "",
   "seo": {
-    "description": "A weekly basket from the Boulder Farmers Market, planned by a local chef and delivered to your door. Join the waitlist.",
-    "title": "A weekly basket from the Boulder Farmers Market"
+    "title": "A weekly basket from the Boulder Farmers Market",
+    "description": "A weekly basket from the Boulder Farmers Market, planned by a local chef and delivered to your door. Join the waitlist."
   },
   "sections": [
     {
@@ -409,7 +409,7 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "Every basket you order earns you patronage. So does every crate a farm sells and every hour our crew drives. The books are open, and the co-op is governed one member, one vote. This is what \"local\" was supposed to mean."
+                      "text": "Every basket earns you patronage. So does every crate a farm sells and every hour our crew drives. The books are open, and every member gets one vote."
                     }
                   ]
                 }
@@ -598,7 +598,7 @@
         "width": "narrow"
       },
       "style": {
-        "colorTheme": "dark",
+        "colorTheme": "brand",
         "padding": {
           "d": "xl",
           "m": "lg"
