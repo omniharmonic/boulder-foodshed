@@ -156,8 +156,8 @@
         "$type": "color"
       },
       "light": {
-        "background": {
-          "$value": "#f3e7cf",
+        "success": {
+          "$value": "#005f29",
           "$type": "color"
         }
       }
