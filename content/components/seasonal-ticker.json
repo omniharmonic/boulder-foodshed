@@ -1,0 +1,81 @@
+{
+  "name": "seasonal-ticker",
+  "label": "Seasonal ticker",
+  "description": "A band of big words drifting sideways. It moves faster as you scroll and reverses when you scroll back up; it stays still for people who prefer less motion.",
+  "version": 1,
+  "category": "gallery",
+  "tags": [
+    "ticker",
+    "marquee",
+    "animated",
+    "scroll"
+  ],
+  "fields": {
+    "label": {
+      "kind": "text",
+      "label": "Description for screen readers",
+      "maxLength": 90
+    },
+    "words": {
+      "kind": "list",
+      "label": "Words",
+      "fields": {
+        "word": {
+          "kind": "text",
+          "label": "Word",
+          "maxLength": 24
+        }
+      },
+      "min": 4,
+      "max": 16,
+      "itemLabel": "word"
+    }
+  },
+  "defaults": {
+    "label": "Some of what's in season at the Boulder Farmers Market",
+    "words": [
+      {
+        "word": "Winter squash"
+      },
+      {
+        "word": "Kale"
+      },
+      {
+        "word": "Carrots"
+      },
+      {
+        "word": "Apples"
+      },
+      {
+        "word": "Sourdough"
+      },
+      {
+        "word": "Chèvre"
+      },
+      {
+        "word": "Beets"
+      },
+      {
+        "word": "Eggs"
+      },
+      {
+        "word": "Garlic"
+      }
+    ]
+  },
+  "template": "<div class='st' role='group' aria-label='{{label}}'>\n  <div class='st__track' data-st-track>\n    <ul class='st__list'>{{#each words}}<li class='st__item'><span>{{word}}</span><svg class='st__star' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M12 1 L14.5 9.5 L23 12 L14.5 14.5 L12 23 L9.5 14.5 L1 12 L9.5 9.5 Z'/></svg></li>{{/each}}</ul>\n    <ul class='st__list' aria-hidden='true'>{{#each words}}<li class='st__item'><span>{{word}}</span><svg class='st__star' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M12 1 L14.5 9.5 L23 12 L14.5 14.5 L12 23 L9.5 14.5 L1 12 L9.5 9.5 Z'/></svg></li>{{/each}}</ul>\n    <ul class='st__list' aria-hidden='true'>{{#each words}}<li class='st__item'><span>{{word}}</span><svg class='st__star' viewBox='0 0 24 24' aria-hidden='true' focusable='false'><path d='M12 1 L14.5 9.5 L23 12 L14.5 14.5 L12 23 L9.5 14.5 L1 12 L9.5 9.5 Z'/></svg></li>{{/each}}</ul>\n  </div>\n</div>",
+  "css": ".st { overflow: hidden; padding-block: var(--os-space-xs); }\n.st__track { display: flex; width: max-content; will-change: transform; animation: stmarq 60s linear infinite; }\n.st--js .st__track { animation: none; }\n.st__list { display: flex; flex: none; align-items: center; margin: 0; padding: 0; list-style: none; }\n.st__item {\n  display: flex;\n  align-items: center;\n  gap: var(--os-space-lg);\n  padding-right: var(--os-space-lg);\n  font-family: var(--os-font-heading);\n  font-weight: var(--os-font-weight-heading);\n  font-size: var(--os-type-h2-font-size);\n  line-height: 1.15;\n  white-space: nowrap;\n  color: var(--os-color-heading);\n}\n.st__star { flex: none; width: 0.6em; height: 0.6em; fill: var(--os-color-ochre); }\n@keyframes stmarq { to { transform: translate3d(-33.3333%, 0, 0); } }\n@media (prefers-reduced-motion: reduce) { .st__track { animation: none; } }",
+  "js": "const st = root.querySelector('.st');\nconst track = root.querySelector('[data-st-track]');\nif (!st || !track || ctx.reducedMotion) return;\nst.classList.add('st--js');\nlet third = 0;\nlet x = 0;\nlet dir = 1;\nlet last = 0;\nlet lastY = window.scrollY;\nlet visible = false;\nlet raf = 0;\nconst measure = () => { third = track.scrollWidth / 3; };\nmeasure();\nnew ResizeObserver(measure).observe(track);\nconst tick = (t) => {\n  raf = 0;\n  if (!visible) return;\n  const dt = last ? Math.min(64, t - last) : 16;\n  last = t;\n  const y = window.scrollY;\n  const dy = y - lastY;\n  lastY = y;\n  if (dy > 0) dir = 1;\n  else if (dy < 0) dir = -1;\n  x += dir * (dt * 0.03 + Math.abs(dy) * 0.5);\n  if (third > 0) x = ((x % third) + third) % third;\n  track.style.transform = 'translate3d(' + (-x) + 'px, 0, 0)';\n  raf = requestAnimationFrame(tick);\n};\nnew IntersectionObserver((entries) => {\n  visible = entries[0].isIntersecting;\n  if (visible && !raf) {\n    last = 0;\n    lastY = window.scrollY;\n    raf = requestAnimationFrame(tick);\n  }\n}).observe(st);",
+  "section": {
+    "width": "full",
+    "padding": {
+      "d": "sm",
+      "m": "sm"
+    }
+  },
+  "ai": {
+    "purpose": "A decorative band of big seasonal words that drifts sideways and responds to scrolling.",
+    "whenToUse": "Between the opening and the first story section, on a brand-coloured band.",
+    "avoid": "Sentences or real farm names; fewer than five words."
+  }
+}

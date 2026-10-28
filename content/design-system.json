@@ -2,138 +2,246 @@
   "$schema": "https://schema.openspace.host/v1/design-system.json",
   "version": 1,
   "brief": {
-    "about": "The landing page for an app that connects people with farmers in their area.",
-    "audience": "Boulder Locals",
+    "about": "The landing page for Boulder Foodshed: a cooperatively owned weekly basket of local food. A local chef plans the week, a crew member shops the Boulder Farmers Market on Saturday morning and bags it there, and one planned route brings it to your door. Eaters, farms, crew and the chef all share in the ownership, and the books are open every week.",
+    "audience": "Boulder locals",
     "feeling": [
       "warm",
       "bold",
       "earthy",
       "modern",
       "handmade"
-    ]
+    ],
+    "notes": "Primary goal: join the waitlist (app not launched yet). One main call to action: Join the waitlist. Public facts confirmed by the owner: basket sizes and prices S $80 / M $120 / L $160; order by Wednesday 8pm; crew shops the Boulder Farmers Market Saturday morning and delivers that afternoon. Not confirmed, leave out: launch month, Boulder & Longmont first, price split numbers, patronage point rates, real farm names (farms must consent first). Site name for this landing page is Boulder Foodshed."
   },
   "brand": {
-    "name": "Boulder Foodshed"
+    "name": "Boulder Foodshed",
+    "voice": "A good host who is also a farmer's friend. Plainspoken, warm, exact, a little wry. Specific over abstract, appetizing, straight about money, and 'we' not 'users'.",
+    "guidelines": "Primary line: The farmer's name is on the box. Say: basket, box, this week's menu, member, producer, chef, crew, steward, open books, your share. Avoid: artisanal, curated, seamless, elevate, premium, user, customer, platform. Buttons are verbs. Sentence case everywhere."
   },
   "tokens": {
     "colors": {
-      "background": {
-        "value": "#f6fbfd",
-        "role": "background"
-      },
-      "surface": {
-        "value": "#eef3f6",
-        "role": "surface"
-      },
-      "text": {
-        "value": "#1a2225",
-        "role": "text"
-      },
-      "text-muted": {
-        "value": "#5c6569",
-        "role": "text-muted"
-      },
-      "heading": {
-        "value": "#0d1417",
-        "role": "heading"
-      },
       "accent": {
-        "value": "#009488",
+        "value": "#a9502c",
         "role": "brand"
       },
       "accent-text": {
-        "value": "#0d1417",
+        "value": "#f5efe2",
         "role": "accent-text"
       },
+      "background": {
+        "value": "#e7dcc4",
+        "role": "background"
+      },
       "border": {
-        "value": "#e0e6e9",
+        "value": "#cdbf9f",
         "role": "border"
       },
       "dark-background": {
-        "value": "#0d1417",
-        "usage": "Dark sections"
+        "value": "#2b2119",
+        "usage": "Dark sections (umber)"
+      },
+      "heading": {
+        "value": "#2b2119",
+        "role": "heading"
+      },
+      "moss": {
+        "value": "#4e6a3d",
+        "usage": "Tiny details only, used through components"
+      },
+      "ochre": {
+        "value": "#c4922e",
+        "usage": "Secondary highlight for stickers and badges, used through components"
+      },
+      "sky": {
+        "value": "#8aaebf",
+        "usage": "Focus rings and small links"
+      },
+      "soil": {
+        "value": "#7a5432",
+        "usage": "Secondary ink in components"
+      },
+      "surface": {
+        "value": "#f5efe2",
+        "role": "surface"
+      },
+      "text": {
+        "value": "#2b2119",
+        "role": "text"
+      },
+      "text-muted": {
+        "value": "#6b4a2c",
+        "role": "text-muted"
       }
     },
     "fonts": {
       "heading": {
-        "family": "Sora",
-        "category": "sans-serif",
+        "family": "Fraunces",
+        "category": "serif",
         "weights": [
-          500,
           600,
-          700
+          700,
+          800
         ],
         "google": true
       },
       "body": {
-        "family": "Inter",
-        "category": "sans-serif",
+        "family": "Fraunces",
+        "category": "serif",
         "weights": [
           400,
           500,
-          600
+          700
+        ],
+        "google": true
+      },
+      "label": {
+        "family": "IBM Plex Mono",
+        "category": "monospace",
+        "weights": [
+          400,
+          500
         ],
         "google": true
       }
     },
     "type": {
+      "body": {
+        "size": 18,
+        "sizeMobile": 17,
+        "lineHeight": 1.6
+      },
       "display": {
-        "size": 87.5,
-        "sizeMobile": 29,
-        "lineHeight": 1.05
+        "size": 96,
+        "sizeMobile": 42,
+        "lineHeight": 1,
+        "weight": 800
+      },
+      "eyebrow": {
+        "size": 13,
+        "lineHeight": 1.3
       },
       "h1": {
-        "size": 56.8,
-        "sizeMobile": 25.3,
-        "lineHeight": 1.1
+        "size": 64,
+        "sizeMobile": 36,
+        "lineHeight": 1.05,
+        "weight": 800
       },
       "h2": {
-        "size": 42.6,
-        "sizeMobile": 22.7,
-        "lineHeight": 1.15
+        "size": 46,
+        "sizeMobile": 29,
+        "lineHeight": 1.1,
+        "weight": 700
       },
       "h3": {
         "size": 32,
-        "sizeMobile": 20.1,
-        "lineHeight": 1.2
+        "sizeMobile": 23,
+        "lineHeight": 1.2,
+        "weight": 700
       },
       "h4": {
         "size": 24,
-        "sizeMobile": 17.6,
-        "lineHeight": 1.3
+        "sizeMobile": 19,
+        "lineHeight": 1.3,
+        "weight": 700
       },
       "lead": {
-        "size": 20.8,
-        "sizeMobile": 16.4,
+        "size": 22,
+        "sizeMobile": 18,
         "lineHeight": 1.5
-      },
-      "body": {
-        "size": 18,
-        "sizeMobile": 15.3,
-        "lineHeight": 1.6
       },
       "small": {
         "size": 14,
         "lineHeight": 1.5
-      },
-      "eyebrow": {
-        "size": 14,
-        "lineHeight": 1.3
       }
     },
     "space": {
-      "contentWidth": 1280,
+      "contentWidth": 1200,
       "narrowWidth": 720
     },
     "radius": {
       "base": 14,
-      "button": 14
+      "button": 999
     }
   },
+  "rules": [
+    "Direction: Farm Stand at 8am, on the Foodshed brand book v0.2 palette. Kraft is the page, paper is the cards, umber is the ink; never pure black or pure white.",
+    "Rust is for the Join the waitlist button, prices and small hand-drawn accents. Ochre is the only secondary highlight (stickers, badges). Moss appears only in tiny details. Sky is for focus rings and small links.",
+    "Headlines in Fraunces: huge, heavy, sentence case, tightly set. At most one word per headline gets a hand-drawn underline or circle.",
+    "Body in Fraunces at a comfortable size; IBM Plex Mono is the working voice for eyebrows, labels, prices and small details.",
+    "One main action per screen: Join the waitlist. Everything else is quieter.",
+    "Motion: one signature moment, the farm names rolling in like a printed box label. Everything else is gentle scroll reveals. All motion off for visitors who ask their device for less.",
+    "Photos are real, close-up and warm: hands, soil, produce, farms. No stock smiles, no laptop mockups. Until real photos arrive, use clearly marked gaps.",
+    "No real farm names until each farm has said yes. The box label shows blank lines where names will be printed.",
+    "Shapes are rounded and a little imperfect, like stickers and painted signs. Dark sections use umber, not black.",
+    "Alternate kraft, paper, rust and umber sections for rhythm, never more than three of the same in a row.",
+    "Never invent farmers, quotes, numbers, dates or prices. Mark gaps instead."
+  ],
   "mapping": {
     "notes": [
-      "Started from the Orbit template; Claude makes it bespoke from here."
+      "Your brand colour #a9502c leads the palette (buttons, links and accents).",
+      "Dark sections use your #2b2119 as the ground with #e7dcc4 text.",
+      "Page background #e7dcc4, text #2b2119.",
+      "Your fonts (Fraunces, IBM Plex Mono) are used as they are — free on Google Fonts and published with the site.",
+      "Text sizes kept: display 96px, h1 64px, h2 46px, h3 32px, h4 24px, lead 22px.",
+      "Page rhythm kept: content 1200px wide.",
+      "Corners: round, as in your tokens.",
+      "5 colour pairings were nudged so all text stays readable (WCAG AA), e.g. success #007835 → #007131.",
+      "Body text contrast 11.6:1."
+    ],
+    "contrast": [
+      {
+        "theme": "light",
+        "role": "success",
+        "from": "#007835",
+        "to": "#007131",
+        "against": "background"
+      },
+      {
+        "theme": "brand",
+        "role": "success",
+        "from": "#b5f8c2",
+        "to": "#b7fbc4",
+        "against": "background"
+      },
+      {
+        "theme": "brand",
+        "role": "warning",
+        "from": "#ffdeba",
+        "to": "#ffe7cb",
+        "against": "background"
+      },
+      {
+        "theme": "brand",
+        "role": "danger",
+        "from": "#ffdbd6",
+        "to": "#ffe5e1",
+        "against": "background"
+      },
+      {
+        "theme": "brand",
+        "role": "accent-pressed",
+        "from": "#d7d7d7",
+        "to": "#ebebeb",
+        "against": "accent-text"
+      }
     ]
+  },
+  "components": {
+    "basket-sizes": {
+      "purpose": "Small $80, Medium $120, Large $160. Cards rise in and prices count up. Anchor: baskets."
+    },
+    "box-label": {
+      "purpose": "The signature moment, on a dark section. Items roll in like a printed label with blank lines for farm names. Real farm names only after each farm consents."
+    },
+    "foodshed-hero": {
+      "purpose": "Once, first section of Home. Headline with a hand-drawn underline, sketched crate, turning price sticker, waitlist button."
+    },
+    "seasonal-ticker": {
+      "purpose": "Brand-coloured band right after the hero. Big seasonal words that drift with scrolling."
+    },
+    "week-path": {
+      "purpose": "How the week works. A line draws itself down the page as you scroll. Anchor: how-it-works."
+    }
   },
   "sources": [
     {
@@ -141,5 +249,5 @@
       "name": "Orbit"
     }
   ],
-  "updatedAt": "2026-10-28T04:17:41.424Z"
+  "updatedAt": "2026-10-28T04:50:44.801Z"
 }

@@ -1,0 +1,121 @@
+{
+  "name": "basket-sizes",
+  "label": "Basket sizes",
+  "description": "Three basket sizes as paper cards that rise into place one after another while the prices count up.",
+  "version": 1,
+  "category": "pricing",
+  "tags": [
+    "pricing",
+    "animated",
+    "cards"
+  ],
+  "fields": {
+    "cta": {
+      "kind": "link",
+      "label": "Button link",
+      "optional": true
+    },
+    "ctaLabel": {
+      "kind": "text",
+      "label": "Button text",
+      "optional": true,
+      "maxLength": 30
+    },
+    "currency": {
+      "kind": "text",
+      "label": "Currency symbol",
+      "maxLength": 3
+    },
+    "eyebrow": {
+      "kind": "text",
+      "label": "Small label",
+      "optional": true,
+      "maxLength": 40
+    },
+    "footnote": {
+      "kind": "text",
+      "label": "Footnote",
+      "optional": true,
+      "maxLength": 160
+    },
+    "heading": {
+      "kind": "text",
+      "label": "Heading",
+      "maxLength": 80
+    },
+    "perLabel": {
+      "kind": "text",
+      "label": "Text after each price",
+      "maxLength": 20
+    },
+    "sizes": {
+      "kind": "list",
+      "label": "Sizes",
+      "fields": {
+        "blurb": {
+          "kind": "text",
+          "label": "Who it feeds",
+          "maxLength": 60
+        },
+        "name": {
+          "kind": "text",
+          "label": "Size name",
+          "maxLength": 20
+        },
+        "price": {
+          "kind": "number",
+          "label": "Price",
+          "min": 0,
+          "max": 9999
+        }
+      },
+      "min": 2,
+      "max": 4,
+      "itemLabel": "name"
+    }
+  },
+  "defaults": {
+    "cta": {
+      "type": "url",
+      "url": "/#waitlist"
+    },
+    "ctaLabel": "Join the waitlist",
+    "currency": "$",
+    "eyebrow": "Baskets",
+    "footnote": "Order by Wednesday at 8pm. The crew shops the Boulder Farmers Market Saturday morning and delivers that afternoon.",
+    "heading": "Pick the size that fits your table.",
+    "perLabel": "a week",
+    "sizes": [
+      {
+        "blurb": "Two people, three dinners",
+        "name": "Small",
+        "price": 80
+      },
+      {
+        "blurb": "A household of four, four dinners",
+        "name": "Medium",
+        "price": 120
+      },
+      {
+        "blurb": "Six-plus, or leftovers on purpose",
+        "name": "Large",
+        "price": 160
+      }
+    ]
+  },
+  "template": "<div class='bs' id='{{@uid}}'>\n  <div class='bs__head'>\n    {{#if eyebrow}}<p class='bs__eyebrow'>{{eyebrow}}</p>{{/if}}\n    <h2 class='bs__title'>{{heading}}</h2>\n  </div>\n  <ul class='bs__grid'>\n    {{#each sizes}}\n    <li class='bs__card' data-bs-card>\n      <span class='bs__dots' data-bs-dots='{{@number}}' aria-hidden='true'></span>\n      <p class='bs__name'>{{name}}</p>\n      <p class='bs__price'><span class='bs__cur'>{{../currency}}</span><span class='bs__num' data-bs-num>{{price}}</span><span class='bs__per'>{{../perLabel}}</span></p>\n      <p class='bs__blurb'>{{blurb}}</p>\n    </li>\n    {{/each}}\n  </ul>\n  <div class='bs__foot'>\n    {{#if footnote}}<p class='bs__note'>{{footnote}}</p>{{/if}}\n    {{#if cta}}{{button cta label=ctaLabel}}{{/if}}\n  </div>\n</div>",
+  "css": ".bs { max-width: 1200px; margin-inline: auto; }\n.bs__head { margin-bottom: var(--os-space-xl); }\n.bs__eyebrow { margin: 0 0 var(--os-space-xs); font-family: var(--os-font-label); font-size: var(--os-type-eyebrow-font-size); letter-spacing: var(--os-type-eyebrow-letter-spacing); text-transform: uppercase; color: var(--os-eyebrow-color, var(--os-color-accent)); }\n.bs__title { margin: 0; font-family: var(--os-font-heading); font-weight: var(--os-font-weight-heading); font-size: var(--os-type-h1-font-size); line-height: var(--os-type-h1-line-height); color: var(--os-color-heading); text-wrap: balance; max-width: 18em; }\n.bs__grid { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--os-space-md); }\n.bs__card { position: relative; background: var(--os-color-surface); border: 2px solid var(--os-color-heading); border-radius: var(--os-radius-image, 14px); padding: var(--os-space-lg); box-shadow: 6px 6px 0 var(--os-color-heading); }\n.bs__dots { display: flex; gap: 6px; margin-bottom: var(--os-space-sm); min-height: 22px; }\n.bs__dot { width: 22px; height: 22px; border-radius: 50%; background: var(--os-color-accent); border: 2px solid var(--os-color-heading); }\n.bs__name { margin: 0 0 var(--os-space-2xs); font-family: var(--os-font-label); font-size: var(--os-type-eyebrow-font-size); letter-spacing: var(--os-type-eyebrow-letter-spacing); text-transform: uppercase; color: var(--os-color-text-muted); }\n.bs__price { margin: 0 0 var(--os-space-xs); display: flex; align-items: baseline; gap: 4px; font-family: var(--os-font-heading); font-weight: var(--os-font-weight-heading); color: var(--os-color-accent); line-height: 1; }\n.bs__cur, .bs__num { font-size: var(--os-type-display-font-size); }\n.bs__per { margin-left: var(--os-space-xs); font-family: var(--os-font-label); font-weight: 400; font-size: var(--os-type-small-font-size); color: var(--os-color-text-muted); }\n.bs__blurb { margin: 0; font-size: var(--os-type-lead-font-size); line-height: var(--os-type-lead-line-height); color: var(--os-color-text); }\n.bs__foot { margin-top: var(--os-space-xl); display: flex; flex-wrap: wrap; align-items: center; gap: var(--os-space-md) var(--os-space-lg); }\n.bs__note { margin: 0; max-width: 34em; font-family: var(--os-font-label); font-size: var(--os-type-small-font-size); line-height: 1.6; color: var(--os-color-text-muted); }\n.bs--js .bs__card { opacity: 0; transform: translateY(48px) rotate(1.5deg); }\n.bs--js.is-in .bs__card { opacity: 1; transform: none; transition: opacity 0.5s ease-out, transform 0.6s var(--os-motion-ease, ease-out); transition-delay: calc(var(--i, 0) * 0.14s); }\n.bs--js .bs__dot { transform: scale(0); }\n.bs--js.is-in .bs__dot { transform: scale(1); transition: transform 0.3s ease-out; transition-delay: calc(0.4s + var(--i, 0) * 0.14s + var(--j, 0) * 0.08s); }\n@media (min-width: 768px) { .bs__grid { grid-template-columns: repeat(3, 1fr); gap: var(--os-space-lg); } .bs__card { padding: var(--os-space-xl) var(--os-space-lg); } .bs__card:nth-child(2) { margin-top: var(--os-space-md); } .bs__card:nth-child(3) { margin-top: var(--os-space-lg); } }\n@media (prefers-reduced-motion: reduce) { .bs__card, .bs__dot { transition: none !important; } }",
+  "js": "const bs = root.querySelector('.bs');\nconst cards = Array.prototype.slice.call(root.querySelectorAll('[data-bs-card]'));\nif (!bs || cards.length === 0) return;\ncards.forEach((card) => {\n  const holder = card.querySelector('[data-bs-dots]');\n  const n = parseInt(holder.getAttribute('data-bs-dots'), 10) || 0;\n  for (let k = 0; k < n; k++) {\n    const d = document.createElement('span');\n    d.className = 'bs__dot';\n    d.style.setProperty('--j', String(k));\n    holder.appendChild(d);\n  }\n});\nif (ctx.reducedMotion) return;\ncards.forEach((card, i) => { card.style.setProperty('--i', String(i)); card.querySelectorAll('.bs__dot').forEach((d) => { d.style.setProperty('--i', String(i)); }); });\nconst nums = cards.map((card) => card.querySelector('[data-bs-num]'));\nconst finals = nums.map((el) => parseInt(el.textContent, 10) || 0);\nbs.classList.add('bs--js');\nnums.forEach((el) => { el.textContent = '0'; });\nconst run = () => {\n  const start = performance.now();\n  const step = (now) => {\n    const t = Math.min(1, (now - start) / 1100);\n    const e = 1 - Math.pow(1 - t, 3);\n    nums.forEach((el, i) => { el.textContent = String(Math.round(finals[i] * e)); });\n    if (t < 1) requestAnimationFrame(step);\n  };\n  requestAnimationFrame(step);\n};\nconst io = new IntersectionObserver((entries) => {\n  if (entries[0].isIntersecting) {\n    bs.classList.add('is-in');\n    run();\n    io.disconnect();\n  }\n}, { threshold: 0.2 });\nio.observe(bs.querySelector('.bs__grid'));",
+  "section": {
+    "width": "wide",
+    "padding": {
+      "d": "xl",
+      "m": "lg"
+    }
+  },
+  "ai": {
+    "purpose": "Shows two to four basket sizes with prices as cards that rise in and count up.",
+    "whenToUse": "Once, after the story sections, before the final sign-up.",
+    "avoid": "Invented prices or discounts; more than four sizes."
+  }
+}
