@@ -1,0 +1,143 @@
+{
+  "name": "week-path",
+  "label": "Week path",
+  "description": "A vertical path through the week. A line draws itself down the page as you scroll and each step lights up when you reach it.",
+  "version": 1,
+  "category": "process",
+  "tags": [
+    "steps",
+    "timeline",
+    "animated",
+    "scroll"
+  ],
+  "fields": {
+    "eyebrow": {
+      "kind": "text",
+      "label": "Small label",
+      "optional": true,
+      "maxLength": 40
+    },
+    "heading": {
+      "kind": "text",
+      "label": "Heading",
+      "maxLength": 80
+    },
+    "intro": {
+      "kind": "richText",
+      "label": "Intro",
+      "optional": true
+    },
+    "steps": {
+      "kind": "list",
+      "label": "Steps",
+      "fields": {
+        "body": {
+          "kind": "richText",
+          "label": "Step text"
+        },
+        "title": {
+          "kind": "text",
+          "label": "Step title",
+          "maxLength": 60
+        },
+        "when": {
+          "kind": "text",
+          "label": "When",
+          "maxLength": 30
+        }
+      },
+      "min": 2,
+      "max": 6,
+      "itemLabel": "title"
+    }
+  },
+  "defaults": {
+    "eyebrow": "How the week works",
+    "heading": "From the market stall to your door, in three steps.",
+    "intro": {
+      "type": "doc",
+      "content": [
+        {
+          "type": "paragraph",
+          "content": [
+            {
+              "type": "text",
+              "text": "You choose a size. The crew does the shopping. Everything else is already planned."
+            }
+          ]
+        }
+      ]
+    },
+    "steps": [
+      {
+        "body": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "The chef starts from what is in season and builds a menu around it. You pick a basket size, tell us what you never want, or say \"surprise me.\" Baskets close Wednesday at 8pm."
+                }
+              ]
+            }
+          ]
+        },
+        "title": "A local chef plans the week",
+        "when": "Midweek"
+      },
+      {
+        "body": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "A crew member walks the Boulder Farmers Market with the list and fills every basket at the stalls, straight from the people who grew it."
+                }
+              ]
+            }
+          ]
+        },
+        "title": "The crew shops the market",
+        "when": "Saturday morning"
+      },
+      {
+        "body": {
+          "type": "doc",
+          "content": [
+            {
+              "type": "paragraph",
+              "content": [
+                {
+                  "type": "text",
+                  "text": "One planned route carries the baskets out. Each comes with the week's recipes and a label naming every farm it came from."
+                }
+              ]
+            }
+          ]
+        },
+        "title": "One route brings it to your door",
+        "when": "Saturday afternoon"
+      }
+    ]
+  },
+  "template": "<div class='wp' id='{{@uid}}'>\n  <div class='wp__head'>\n    {{#if eyebrow}}<p class='wp__eyebrow'>{{eyebrow}}</p>{{/if}}\n    <h2 class='wp__title'>{{heading}}</h2>\n    {{rich intro class=\"wp__intro\"}}\n  </div>\n  <div class='wp__wrap' data-wp-wrap>\n    <div class='wp__rail' aria-hidden='true'><div class='wp__fill' data-wp-fill></div></div>\n    <ol class='wp__list'>\n      {{#each steps}}\n      <li class='wp__step' data-wp-step>\n        <span class='wp__dot' aria-hidden='true'>{{@number}}</span>\n        <p class='wp__when'>{{when}}</p>\n        <h3 class='wp__steptitle'>{{title}}</h3>\n        {{rich body class=\"wp__body\"}}\n      </li>\n      {{/each}}\n    </ol>\n  </div>\n</div>",
+  "css": ".wp { max-width: 880px; margin-inline: auto; }\n.wp__head { margin-bottom: var(--os-space-xl); }\n.wp__eyebrow { margin: 0 0 var(--os-space-xs); font-family: var(--os-font-label); font-size: var(--os-type-eyebrow-font-size); letter-spacing: var(--os-type-eyebrow-letter-spacing); text-transform: var(--os-type-eyebrow-text-transform, uppercase); color: var(--os-eyebrow-color, var(--os-color-accent)); }\n.wp__title { margin: 0 0 var(--os-space-sm); font-family: var(--os-font-heading); font-weight: var(--os-font-weight-heading); font-size: var(--os-type-h1-font-size); line-height: var(--os-type-h1-line-height); color: var(--os-color-heading); text-wrap: balance; }\n.wp__intro { max-width: 36em; font-size: var(--os-type-lead-font-size); line-height: var(--os-type-lead-line-height); color: var(--os-color-text); }\n.wp__intro p { margin: 0; }\n.wp__wrap { position: relative; }\n.wp__rail { position: absolute; left: 23px; top: 24px; bottom: 24px; width: 4px; border-radius: 4px; background: var(--os-color-border); }\n.wp__fill { position: absolute; inset: 0; border-radius: 4px; background: var(--os-color-accent); transform-origin: top; transform: scaleY(1); }\n.wp__list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--os-space-xl); }\n.wp__step { position: relative; padding-left: 80px; transition: opacity 0.5s var(--os-motion-ease, ease-out), transform 0.5s var(--os-motion-ease, ease-out); }\n.wp__dot { position: absolute; left: 0; top: 0; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; font-family: var(--os-font-label); font-size: 18px; font-weight: 500; background: var(--os-color-accent); color: var(--os-color-accent-text); border: 4px solid var(--os-color-background); box-shadow: 0 0 0 2px var(--os-color-accent); transition: background 0.4s ease, color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease; }\n.wp__when { margin: 0 0 var(--os-space-2xs); font-family: var(--os-font-label); font-size: var(--os-type-eyebrow-font-size); letter-spacing: var(--os-type-eyebrow-letter-spacing); text-transform: uppercase; color: var(--os-color-text-muted); padding-top: 4px; }\n.wp__steptitle { margin: 0 0 var(--os-space-xs); font-family: var(--os-font-heading); font-weight: var(--os-font-weight-heading); font-size: var(--os-type-h3-font-size); line-height: var(--os-type-h3-line-height); color: var(--os-color-heading); text-wrap: balance; }\n.wp__body { max-width: 34em; color: var(--os-color-text); }\n.wp__body p { margin: 0; }\n.wp--js .wp__fill { transform: scaleY(0); }\n.wp--js .wp__step { opacity: 0.3; transform: translateY(var(--os-motion-reveal-distance, 16px)); }\n.wp--js .wp__step .wp__dot { background: var(--os-color-surface); color: var(--os-color-text-muted); box-shadow: 0 0 0 2px var(--os-color-border); }\n.wp--js .wp__step.is-on { opacity: 1; transform: none; }\n.wp--js .wp__step.is-on .wp__dot { background: var(--os-color-accent); color: var(--os-color-accent-text); box-shadow: 0 0 0 2px var(--os-color-accent); transform: scale(1.08); }\n@media (min-width: 768px) { .wp__rail { left: 27px; top: 29px; bottom: 29px; } .wp__step { padding-left: 110px; } .wp__dot { width: 58px; height: 58px; font-size: 22px; } }\n@media (prefers-reduced-motion: reduce) { .wp__step, .wp__dot { transition: none; } }",
+  "js": "const wrap = root.querySelector('[data-wp-wrap]');\nconst fill = root.querySelector('[data-wp-fill]');\nconst steps = Array.prototype.slice.call(root.querySelectorAll('[data-wp-step]'));\nif (!wrap || !fill || ctx.reducedMotion) return;\nroot.querySelector('.wp').classList.add('wp--js');\nlet ticking = false;\nconst update = () => {\n  ticking = false;\n  const vh = window.innerHeight;\n  const mark = vh * 0.62;\n  const r = wrap.getBoundingClientRect();\n  const p = Math.max(0, Math.min(1, (mark - r.top) / r.height));\n  fill.style.transform = 'scaleY(' + p + ')';\n  steps.forEach((s) => {\n    s.classList.toggle('is-on', s.getBoundingClientRect().top < mark);\n  });\n};\nconst onScroll = () => {\n  if (!ticking) { ticking = true; requestAnimationFrame(update); }\n};\nwindow.addEventListener('scroll', onScroll, { passive: true });\nwindow.addEventListener('resize', onScroll);\nupdate();",
+  "section": {
+    "width": "wide",
+    "padding": {
+      "d": "xl",
+      "m": "lg"
+    }
+  },
+  "ai": {
+    "purpose": "A scroll-drawn path of 2 to 6 steps that explains how something works over time.",
+    "whenToUse": "To explain the weekly rhythm right after the opening.",
+    "avoid": "More than six steps; long paragraphs."
+  }
+}
