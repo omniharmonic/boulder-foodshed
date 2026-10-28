@@ -8,64 +8,20 @@
   },
   "sections": [
     {
-      "id": "sec_wtq8sqe4sk",
-      "preset": "hero/product-screenshot@1",
-      "label": "Product with screenshot",
+      "id": "sec_7vs8kpw46a",
+      "preset": "component/foodshed-hero@1",
+      "label": "Foodshed hero",
       "layout": {
-        "mode": "grid",
-        "rows": {
-          "d": 24,
-          "m": 32
+        "mode": "stack",
+        "columns": {
+          "d": [
+            12
+          ]
         },
-        "items": {
-          "blk_26e3bsa66c": {
-            "d": {
-              "x": 1,
-              "y": 4,
-              "w": 10,
-              "h": 11
-            },
-            "m": {
-              "x": 1,
-              "y": 1,
-              "w": 8,
-              "h": 14
-            }
-          },
-          "blk_xvjdg27sbs": {
-            "d": {
-              "x": 1,
-              "y": 15,
-              "w": 10,
-              "h": 5
-            },
-            "m": {
-              "x": 1,
-              "y": 15,
-              "w": 8,
-              "h": 5
-            }
-          },
-          "blk_s7kffnd26h": {
-            "d": {
-              "x": 12,
-              "y": 1,
-              "w": 13,
-              "h": 24,
-              "bleed": "right"
-            },
-            "m": {
-              "x": 1,
-              "y": 21,
-              "w": 8,
-              "h": 12,
-              "bleed": "right"
-            }
-          }
-        }
+        "width": "wide"
       },
       "style": {
-        "colorTheme": "dark-accent",
+        "colorTheme": "light",
         "padding": {
           "d": "xl",
           "m": "lg"
@@ -73,56 +29,100 @@
       },
       "blocks": [
         {
-          "id": "blk_26e3bsa66c",
-          "type": "heading",
+          "id": "blk_q1t94ve421",
+          "type": "component/foodshed-hero",
           "v": 1,
           "fields": {
-            "text": "Every customer, one calm inbox",
-            "level": "h1",
-            "size": "display",
-            "eyebrow": "Customer support for small teams",
-            "subheading": "Relay brings email, chat and your help centre together, so nothing slips and nobody answers the same question twice."
-          },
-          "variant": "plain"
-        },
-        {
-          "id": "blk_xvjdg27sbs",
-          "type": "button",
-          "v": 1,
-          "fields": {
-            "label": "Start free",
-            "link": {
+            "badge": "Baskets from $80",
+            "cta": {
               "type": "url",
-              "url": "https://app.relay.example/signup"
+              "url": "/#waitlist"
             },
-            "role": "primary",
-            "secondaryLabel": "See pricing",
-            "secondaryLink": {
-              "type": "page",
-              "page": "pg_scxghk4vxy"
+            "ctaLabel": "Join the waitlist",
+            "eyebrow": "Boulder · weekly basket · co-op",
+            "intro": {
+              "content": [
+                {
+                  "content": [
+                    {
+                      "text": "A weekly basket from the Boulder Farmers Market, planned by a local chef and brought to your door. Owned by the people who grow it, cook it, carry it, and eat it.",
+                      "type": "text"
+                    }
+                  ],
+                  "type": "paragraph"
+                }
+              ],
+              "type": "doc"
             },
-            "note": "Free for two seats. No card needed."
-          },
-          "variant": "default"
+            "more": {
+              "type": "url",
+              "url": "/#how-it-works"
+            },
+            "moreLabel": "See how the week works",
+            "note": "Baskets from $80.",
+            "titleEmphasis": "name",
+            "titleEnd": "is on the box.",
+            "titleStart": "The farmer's"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sec_6pwd9my34j",
+      "preset": "component/seasonal-ticker@1",
+      "label": "Seasonal ticker",
+      "layout": {
+        "mode": "stack",
+        "columns": {
+          "d": [
+            12
+          ]
         },
+        "width": "full"
+      },
+      "style": {
+        "colorTheme": "brand",
+        "padding": {
+          "d": "sm",
+          "m": "sm"
+        }
+      },
+      "blocks": [
         {
-          "id": "blk_s7kffnd26h",
-          "type": "image",
+          "id": "blk_j829aqh6zj",
+          "type": "component/seasonal-ticker",
           "v": 1,
           "fields": {
-            "image": {
-              "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1800&q=80",
-              "alt": "The Relay inbox showing conversations and charts",
-              "width": 1800,
-              "height": 1282
-            },
-            "aspect": "original",
-            "lightbox": false
-          },
-          "variant": "default",
-          "style": {
-            "radius": "lg",
-            "shadow": "lg"
+            "label": "Some of what's in season at the Boulder Farmers Market",
+            "words": [
+              {
+                "word": "Winter squash"
+              },
+              {
+                "word": "Kale"
+              },
+              {
+                "word": "Carrots"
+              },
+              {
+                "word": "Apples"
+              },
+              {
+                "word": "Sourdough"
+              },
+              {
+                "word": "Chèvre"
+              },
+              {
+                "word": "Beets"
+              },
+              {
+                "word": "Eggs"
+              },
+              {
+                "word": "Garlic"
+              }
+            ]
           }
         }
       ]
