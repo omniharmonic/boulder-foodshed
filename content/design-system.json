@@ -14,126 +14,210 @@
     "notes": "Primary goal: join the waitlist (app not launched yet). One main call to action across the page: Join the waitlist. Replace all Relay support-software sample content; do not invent farmers, quotes, numbers or prices."
   },
   "brand": {
-    "name": "Boulder Foodshed"
+    "name": "Boulder Foodshed",
+    "voice": "A neighbour at a farm-stand: warm, plain-spoken, a little proud of the place. Short sentences. No tech jargon."
   },
   "tokens": {
     "colors": {
-      "background": {
-        "value": "#f6fbfd",
-        "role": "background"
-      },
-      "surface": {
-        "value": "#eef3f6",
-        "role": "surface"
-      },
-      "text": {
-        "value": "#1a2225",
-        "role": "text"
-      },
-      "text-muted": {
-        "value": "#5c6569",
-        "role": "text-muted"
-      },
-      "heading": {
-        "value": "#0d1417",
-        "role": "heading"
-      },
       "accent": {
-        "value": "#009488",
+        "value": "#c4402a",
         "role": "brand"
       },
       "accent-text": {
-        "value": "#0d1417",
+        "value": "#fff8ec",
         "role": "accent-text"
       },
+      "background": {
+        "value": "#f6edde",
+        "role": "background"
+      },
       "border": {
-        "value": "#e0e6e9",
+        "value": "#d8c7a6",
         "role": "border"
       },
       "dark-background": {
-        "value": "#0d1417",
-        "usage": "Dark sections"
+        "value": "#2b1d14",
+        "usage": "Dark sections (deep soil)"
+      },
+      "heading": {
+        "value": "#2a1a10",
+        "role": "heading"
+      },
+      "leaf": {
+        "value": "#4f6b3a",
+        "usage": "Tiny details only, used through components"
+      },
+      "squash": {
+        "value": "#e2a72e",
+        "usage": "Secondary highlight for stickers and small badges, used through components"
+      },
+      "surface": {
+        "value": "#ecdfc6",
+        "role": "surface"
+      },
+      "text": {
+        "value": "#3b2a1f",
+        "role": "text"
+      },
+      "text-muted": {
+        "value": "#6a5442",
+        "role": "text-muted"
       }
     },
     "fonts": {
       "heading": {
-        "family": "Sora",
-        "category": "sans-serif",
+        "family": "Fraunces",
+        "category": "serif",
         "weights": [
-          500,
           600,
-          700
+          700,
+          800
         ],
         "google": true
       },
       "body": {
-        "family": "Inter",
+        "family": "DM Sans",
         "category": "sans-serif",
         "weights": [
           400,
           500,
-          600
+          700
         ],
         "google": true
       }
     },
     "type": {
-      "display": {
-        "size": 87.5,
-        "sizeMobile": 29,
-        "lineHeight": 1.05
-      },
-      "h1": {
-        "size": 56.8,
-        "sizeMobile": 25.3,
-        "lineHeight": 1.1
-      },
-      "h2": {
-        "size": 42.6,
-        "sizeMobile": 22.7,
-        "lineHeight": 1.15
-      },
-      "h3": {
-        "size": 32,
-        "sizeMobile": 20.1,
-        "lineHeight": 1.2
-      },
-      "h4": {
-        "size": 24,
-        "sizeMobile": 17.6,
-        "lineHeight": 1.3
-      },
-      "lead": {
-        "size": 20.8,
-        "sizeMobile": 16.4,
-        "lineHeight": 1.5
-      },
       "body": {
         "size": 18,
-        "sizeMobile": 15.3,
+        "sizeMobile": 16,
         "lineHeight": 1.6
       },
-      "small": {
-        "size": 14,
-        "lineHeight": 1.5
+      "display": {
+        "size": 96,
+        "sizeMobile": 42,
+        "lineHeight": 1,
+        "weight": 800
       },
       "eyebrow": {
         "size": 14,
         "lineHeight": 1.3
+      },
+      "h1": {
+        "size": 64,
+        "sizeMobile": 36,
+        "lineHeight": 1.05,
+        "weight": 800
+      },
+      "h2": {
+        "size": 46,
+        "sizeMobile": 29,
+        "lineHeight": 1.1,
+        "weight": 700
+      },
+      "h3": {
+        "size": 32,
+        "sizeMobile": 23,
+        "lineHeight": 1.2,
+        "weight": 700
+      },
+      "h4": {
+        "size": 24,
+        "sizeMobile": 19,
+        "lineHeight": 1.3,
+        "weight": 700
+      },
+      "lead": {
+        "size": 22,
+        "sizeMobile": 17,
+        "lineHeight": 1.5
+      },
+      "small": {
+        "size": 14,
+        "lineHeight": 1.5
       }
     },
     "space": {
-      "contentWidth": 1280,
+      "contentWidth": 1200,
       "narrowWidth": 720
     },
     "radius": {
-      "base": 14,
-      "button": 14
+      "base": 20,
+      "button": 999
     }
   },
+  "rules": [
+    "Direction: Farm Stand at 8am. Paper-bag cream grounds every page; text is soil brown, never pure black.",
+    "Tomato red is for the Join the waitlist button, links and small hand-drawn accents. Squash yellow is the only secondary highlight. Leaf green appears only in tiny details.",
+    "Headlines in Fraunces: huge, heavy, sentence case, tightly set. At most one word per headline gets a hand-drawn underline or circle.",
+    "Body text in DM Sans, plain and friendly. Write like a neighbour at a market stall, not a software company.",
+    "One main action per screen: Join the waitlist. Everything else is quieter.",
+    "Photos are real, close-up and warm: hands, soil, produce, farms. No stock smiles, no laptops or phone mockups as the hero. Until real photos arrive, leave clearly marked gaps.",
+    "Shapes are rounded and a little imperfect, like stickers and painted signs. Dark sections use deep soil brown, not black.",
+    "Alternate cream, kraft, tomato and soil sections for rhythm, never more than three of the same in a row.",
+    "Never invent farmers, quotes, numbers, dates or prices. Mark gaps instead."
+  ],
   "mapping": {
     "notes": [
-      "Started from the Orbit template; Claude makes it bespoke from here."
+      "Your brand colour #c4402a leads the palette (buttons, links and accents).",
+      "Dark sections use your #3b2a1f as the ground with #f6edde text.",
+      "Page background #f6edde, text #3b2a1f.",
+      "Your fonts (Fraunces, DM Sans) are used as they are — free on Google Fonts and published with the site.",
+      "Text sizes kept: display 96px, h1 64px, h2 46px, h3 32px, h4 24px, lead 22px.",
+      "Page rhythm kept: content 1200px wide.",
+      "Corners: round, as in your tokens.",
+      "7 colour pairings were nudged so all text stays readable (WCAG AA), e.g. success #007835 → #007333.",
+      "Body text contrast 11.8:1."
+    ],
+    "contrast": [
+      {
+        "theme": "light",
+        "role": "success",
+        "from": "#007835",
+        "to": "#007333",
+        "against": "surface"
+      },
+      {
+        "theme": "brand",
+        "role": "background",
+        "from": "#c4402a",
+        "to": "#be3b25",
+        "against": "text"
+      },
+      {
+        "theme": "brand",
+        "role": "success",
+        "from": "#b5f8c2",
+        "to": "#b6fac3",
+        "against": "background"
+      },
+      {
+        "theme": "brand",
+        "role": "warning",
+        "from": "#ffdeba",
+        "to": "#ffe6c9",
+        "against": "background"
+      },
+      {
+        "theme": "brand",
+        "role": "danger",
+        "from": "#ffdbd6",
+        "to": "#ffe4e0",
+        "against": "background"
+      },
+      {
+        "theme": "brand",
+        "role": "accent-hover",
+        "from": "#ebebeb",
+        "to": "#f2f2f2",
+        "against": "accent-text"
+      },
+      {
+        "theme": "brand",
+        "role": "accent-pressed",
+        "from": "#d7d7d7",
+        "to": "#f2f2f2",
+        "against": "accent-text"
+      }
     ]
   },
   "sources": [
@@ -142,5 +226,5 @@
       "name": "Orbit"
     }
   ],
-  "updatedAt": "2026-10-28T04:26:45.030Z"
+  "updatedAt": "2026-10-28T04:27:51.457Z"
 }
