@@ -383,10 +383,10 @@
           "type": "heading",
           "v": 1,
           "fields": {
-            "text": "We believe every child should grow up within a short walk of a tree.",
+            "text": "The box works for you.",
             "level": "h2",
-            "size": "h1",
-            "eyebrow": "Our mission"
+            "size": "display",
+            "eyebrow": "Who owns it"
           },
           "variant": "plain",
           "style": {
@@ -408,7 +408,7 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "That's the whole plan. Everything we do is in service of it."
+                      "text": "Every basket you order earns you patronage. So does every crate a farm sells and every hour our crew drives. The books are open, and the co-op is governed one member, one vote. This is what \"local\" was supposed to mean."
                     }
                   ]
                 }
@@ -451,10 +451,10 @@
           "v": 1,
           "column": 0,
           "fields": {
-            "text": "Good to know before you visit",
+            "text": "Good to know before you join.",
             "level": "h2",
             "size": "auto",
-            "eyebrow": "FAQ"
+            "eyebrow": "Questions"
           },
           "variant": "plain"
         },
@@ -472,27 +472,12 @@
                   "content": [
                     {
                       "type": "text",
-                      "text": "Can't find what you're looking for? We're happy to help."
+                      "text": "Short answers for now. There will be more as we get closer to opening."
                     }
                   ]
                 }
               ]
             }
-          },
-          "variant": "default"
-        },
-        {
-          "id": "blk_vyxs1gq1z9",
-          "type": "button",
-          "v": 1,
-          "column": 0,
-          "fields": {
-            "label": "Get in touch",
-            "link": {
-              "type": "url",
-              "url": "/contact"
-            },
-            "role": "secondary"
           },
           "variant": "default"
         },
@@ -504,7 +489,6 @@
           "fields": {
             "items": [
               {
-                "question": "Do I need to book?",
                 "answer": {
                   "type": "doc",
                   "content": [
@@ -513,15 +497,15 @@
                       "content": [
                         {
                           "type": "text",
-                          "text": "We keep half the tables for walk-ins. For groups of six or more, please book ahead."
+                          "text": "No. You choose your basket each week, you can skip a week, and it comes to your door."
                         }
                       ]
                     }
                   ]
-                }
+                },
+                "question": "Is this a CSA?"
               },
               {
-                "question": "Do you cater for allergies?",
                 "answer": {
                   "type": "doc",
                   "content": [
@@ -530,15 +514,15 @@
                       "content": [
                         {
                           "type": "text",
-                          "text": "Yes. Tell your server and the kitchen will walk you through every dish. Most of the menu can be made gluten-free."
+                          "text": "No. A crew member shops the Boulder Farmers Market for your basket, and the label names every farm it came from. The crew who carry it own part of the co-op."
                         }
                       ]
                     }
                   ]
-                }
+                },
+                "question": "Is it Instacart?"
               },
               {
-                "question": "Is there parking?",
                 "answer": {
                   "type": "doc",
                   "content": [
@@ -547,15 +531,15 @@
                       "content": [
                         {
                           "type": "text",
-                          "text": "There's free street parking after 6pm and a public lot two minutes' walk away on Ash Street."
+                          "text": "Say so once and you'll never see it."
                         }
                       ]
                     }
                   ]
-                }
+                },
+                "question": "What if I hate cilantro?"
               },
               {
-                "question": "Can I bring my dog?",
                 "answer": {
                   "type": "doc",
                   "content": [
@@ -564,12 +548,30 @@
                       "content": [
                         {
                           "type": "text",
-                          "text": "Well-behaved dogs are very welcome on the patio, and there's always a water bowl by the door."
+                          "text": "Baskets close Wednesday at 8pm. The crew shops the market Saturday morning and delivers that afternoon."
                         }
                       ]
                     }
                   ]
-                }
+                },
+                "question": "When do I order, and when does it arrive?"
+              },
+              {
+                "answer": {
+                  "type": "doc",
+                  "content": [
+                    {
+                      "type": "paragraph",
+                      "content": [
+                        {
+                          "type": "text",
+                          "text": "Not yet. Join the waitlist and we'll email you when baskets open."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "question": "Is it open yet?"
               }
             ],
             "exclusive": false,
@@ -607,11 +609,11 @@
           "type": "heading",
           "v": 1,
           "fields": {
-            "text": "One good essay, every other Sunday",
+            "text": "Get a basket when we open.",
             "level": "h2",
             "size": "auto",
-            "eyebrow": "The Margin",
-            "subheading": "On attention, craft and the places we go to think. Free, and read by 9,000 people."
+            "eyebrow": "The waitlist",
+            "subheading": "Leave your email and we'll tell you when the first Boulder baskets are ready."
           },
           "variant": "plain",
           "style": {
@@ -625,11 +627,11 @@
           "type": "newsletter",
           "v": 1,
           "fields": {
-            "askName": false,
+            "askName": true,
             "placeholder": "you@example.com",
-            "buttonLabel": "Subscribe",
-            "successMessage": "Welcome aboard. The next essay arrives on Sunday.",
-            "note": "Unsubscribe in one click."
+            "buttonLabel": "Join the waitlist",
+            "successMessage": "Thank you. Check your email to confirm, and we'll be in touch when baskets open.",
+            "note": "One email when we open. Unsubscribe any time."
           },
           "variant": "inline",
           "style": {
