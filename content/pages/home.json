@@ -42,18 +42,18 @@
             "ctaLabel": "Join the waitlist",
             "eyebrow": "Boulder · weekly basket · co-op",
             "intro": {
+              "type": "doc",
               "content": [
                 {
+                  "type": "paragraph",
                   "content": [
                     {
-                      "text": "A weekly basket from the Boulder Farmers Market, planned by a local chef and brought to your door. Owned by the people who grow it, cook it, carry it, and eat it.",
-                      "type": "text"
+                      "type": "text",
+                      "text": "A weekly basket from the Boulder Farmers Market, planned by a local chef and brought to your door. Owned by the people who grow it, cook it, carry it, and eat it."
                     }
-                  ],
-                  "type": "paragraph"
+                  ]
                 }
-              ],
-              "type": "doc"
+              ]
             },
             "more": {
               "type": "url",
