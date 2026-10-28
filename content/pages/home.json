@@ -300,6 +300,63 @@
       ]
     },
     {
+      "id": "sec_gg2xtx1cjb",
+      "preset": "component/basket-sizes@1",
+      "label": "Basket sizes",
+      "layout": {
+        "mode": "stack",
+        "columns": {
+          "d": [
+            12
+          ]
+        },
+        "width": "wide"
+      },
+      "style": {
+        "colorTheme": "light",
+        "padding": {
+          "d": "xl",
+          "m": "lg"
+        }
+      },
+      "blocks": [
+        {
+          "id": "blk_jw900rj04w",
+          "type": "component/basket-sizes",
+          "v": 1,
+          "fields": {
+            "cta": {
+              "type": "url",
+              "url": "/#waitlist"
+            },
+            "ctaLabel": "Join the waitlist",
+            "currency": "$",
+            "eyebrow": "Baskets",
+            "footnote": "Order by Wednesday at 8pm. The crew shops the Boulder Farmers Market Saturday morning and delivers that afternoon.",
+            "heading": "Pick the size that fits your table.",
+            "perLabel": "a week",
+            "sizes": [
+              {
+                "blurb": "Two people, three dinners",
+                "name": "Small",
+                "price": 80
+              },
+              {
+                "blurb": "A household of four, four dinners",
+                "name": "Medium",
+                "price": 120
+              },
+              {
+                "blurb": "Six-plus, or leftovers on purpose",
+                "name": "Large",
+                "price": 160
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
       "id": "sec_64pxbdk0na",
       "preset": "logos/split-heading@1",
       "label": "Logos beside heading",
